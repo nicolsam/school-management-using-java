@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS ALUNO (
+    matricula VARCHAR(10) NOT NULL,
+    nome VARCHAR(40) NOT NULL,
+    entrada INT NOT NULL,
+    PRIMARY KEY(matricula)
+)
