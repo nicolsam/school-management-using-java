@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  db:
+    container_name: java-postgres
+    image: postgres:latest
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./sql/create_school.sql:/docker-entrypoint-initdb.d/create_school.sql
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ESCOLA
+volumes:
+  postgres-data:
